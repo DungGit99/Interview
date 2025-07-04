@@ -26,3 +26,15 @@ export const UserSchema = SchemaFactory.createForClass(User);
 |----------|----------|
 | required: true   | Trường này bắt buộc phải có |
 | default: value   | Gán giá trị mặc định  |
+| unique: true | 	Không được trùng lặp giá trị |
+| type: String   | Xác định kiểu dữ liệu (ít dùng, thường tự infer từ TypeScript) |
+| required: true   | Trường này bắt buộc phải có |
+
+### Ví dụ nâng cao:
+```ts
+@Prop({ required: true, unique: true })
+email: string;
+
+@Prop({ enum: ['ADMIN', 'USER'], default: 'USER' })
+role: string;
+```
