@@ -7,6 +7,7 @@
 ```
 2. 🔢 So sánh giá trị
 -  Toán tử logic
+
 | Toán tử | Ý nghĩa                   | Ví dụ                              |
 |---------|--------------------------|-----------------------------------|
 | `$eq`   | Bằng                     | `db.users.find({ age: { $eq: 25 } })` |
@@ -17,6 +18,7 @@
 | `$lte`  | Nhỏ hơn hoặc bằng        | `db.users.find({ age: { $lte: 30 } })` |
 
 -  Toán tử logic
+
 | Toán tử | Ý nghĩa                   | Ví dụ                                                                 |
 |---------|--------------------------|-----------------------------------------------------------------------|
 | `$and`  | VÀ (AND)                 | `db.users.find({ $and: [{ age: 25 }, { name: "Alice" }] })`           |
@@ -24,6 +26,7 @@
 | `$not`  | PHỦ ĐỊNH (NOT)           | `db.users.find({ age: { $not: { $lt: 20 } } })`                       |
 | `$nor`  | PHỦ ĐỊNH HOẶC (NOR)      | `db.users.find({ $nor: [{ age: 25 }, { name: "Bob" }] })`             |
 - Toán tử mảng
+
 | Toán tử | Ý nghĩa                     | Ví dụ                                      |
 |---------|----------------------------|--------------------------------------------|
 | `$in`   | Giá trị thuộc mảng          | `db.users.find({ age: { $in: [20, 25, 30] } })` |
@@ -31,6 +34,8 @@
 | `$all`  | Tất cả giá trị trong mảng   | `db.users.find({ tags: { $all: ["vip", "admin"] } })` |
 | `$size` | Độ dài mảng                | `db.users.find({ tags: { $size: 2 } })`    |
 -  Toán tử trên trường nested/object
+
+
 | Toán tử        | Ý nghĩa                          | Ví dụ                                                                 |
 |----------------|---------------------------------|-----------------------------------------------------------------------|
 | `$elemMatch`   | Khớp phần tử trong mảng          | `db.users.find({ orders: { $elemMatch: { price: { $gt: 100 } } } })`  |
