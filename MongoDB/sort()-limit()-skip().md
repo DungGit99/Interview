@@ -72,5 +72,14 @@
 
 ```js
 // Thay vì dùng skip, lấy các document có _id > last_id
-db.users.find({ _id: { $gt: last_id } }).limit(10);
+	db.users.find({ _id: { $gt: last_id } }).limit(10);
+
+
+	async findAll(page = 1, limit = 10) {
+	return this.postModel
+		.find()
+		.sort({ createdAt: -1 })       // mới nhất lên đầu
+		.skip((page - 1) * limit)      // bỏ qua các trang trước
+		.limit(limit);                 // lấy đúng số dòng mỗi trang
+	}
 ```
