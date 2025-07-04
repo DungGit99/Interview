@@ -5,9 +5,11 @@
 
 **SWR** (Stale-While-Revalidate) là thư viện fetch dữ liệu do Vercel phát triển. Nó giúp:
 
-- ✅ Cache dữ liệu
-- ✅ Tự động revalidate khi cần
-- ✅ Tối ưu trải nghiệm người dùng khi render phía client
+- ✅ Tự động cache và revalidate dữ liệu
+
+- ✅ Tự động re-fetch khi chuyển tab quay lại
+
+- ✅ Dễ dùng, kết hợp tốt với Next.js CSR
 
 ---
 
