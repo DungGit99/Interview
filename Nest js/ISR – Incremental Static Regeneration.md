@@ -29,3 +29,7 @@ export async function getStaticProps(context) {
 - ✅ Hiệu suất cao: Giống SSG, trang được tạo sẵn và cache.
 - ✅ Dữ liệu luôn mới: Tự động cập nhật mà không cần rebuild toàn bộ ứng dụng.
 - ✅ Tối ưu cho SEO: Trang tĩnh được index dễ dàng hơn so với CSR (Client-Side Rendering).
+Phương thức	SSR (Server-Side Rendering)	SSG (Static Site Generation)	ISR (Incremental Static Regeneration)
+Tốc độ	Chậm hơn (render mỗi request)	Nhanh nhất (pre-built)	Nhanh (pre-built + cập nhật sau)
+Dữ liệu	Luôn mới	Chỉ mới lúc build	Cập nhật định kỳ
+Phù hợp	Dữ liệu real-time	Nội dung ít thay đổi	Nội dung thay đổi nhưng không cần real-time
