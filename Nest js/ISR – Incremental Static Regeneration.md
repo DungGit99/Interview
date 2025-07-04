@@ -23,7 +23,7 @@ export async function getStaticProps(context) {
 }
 
 ```
-- Ví dụ: *revalidate*: 60 nghĩa là trang sẽ được kiểm tra và cập nhật mỗi 60 giây nếu có request mới.
+- Ví dụ: **revalidate**: 60 nghĩa là trang sẽ được kiểm tra và cập nhật mỗi 60 giây nếu có request mới.
 
 ## 🔹 Lợi ích của ISR
 - ✅ Hiệu suất cao: Giống SSG, trang được tạo sẵn và cache.
